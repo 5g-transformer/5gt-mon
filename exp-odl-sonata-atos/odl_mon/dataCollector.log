@@ -1,0 +1,1190 @@
+2018-10-12 18:37:02,990 INFO OpenDayLight Data Collector
+2018-10-12 18:37:02,990 INFO ODL Server http://192.168.137.43:8181
+2018-10-12 18:37:02,990 INFO Promth Server http://192.168.201.2:9091/metrics
+2018-10-12 18:37:02,990 INFO Monitoring Node test
+2018-10-12 18:37:03,342 INFO Response code from ODL: 200
+2018-10-12 18:37:04,764 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,765 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_state_live{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_state_live{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_state_live{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_state_blocked{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_state_blocked{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_state_blocked{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}1
+port_state_link_down{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_state_link_down{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_state_link_down{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_maximum_speed{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_maximum_speed{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_maximum_speed{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_current_speed{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}10000000
+port_current_speed{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}10000000
+port_current_speed{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_receive_frame_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_receive_frame_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_receive_frame_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_packets_transmitted{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}127
+port_packets_transmitted{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}73
+port_packets_transmitted{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}126
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_packets_received{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}8
+port_packets_received{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}123
+port_packets_received{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}8
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_collision_count{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_collision_count{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_collision_count{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_receive_over_run_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_receive_over_run_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_receive_over_run_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_receive_crc_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_receive_crc_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_receive_crc_error{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_transmit_errors{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_transmit_errors{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_transmit_errors{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_receive_drops{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_receive_drops{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_receive_drops{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_transmit_drops{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_transmit_drops{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_transmit_drops{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:16:5e:b0:ec:4e"}0
+port_receive_errors{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="9a:07:75:38:72:0c"}0
+port_receive_errors{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="ae:bc:89:7b:59:6c"}0
+port_receive_errors{id="openflow:15", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="e2:7a:0d:52:03:88"}0
+
+2018-10-12 18:37:04,767 INFO Response Code: 202
+2018-10-12 18:37:04,768 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,769 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_state_live{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_state_live{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_state_live{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_state_blocked{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_state_blocked{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_state_blocked{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}1
+port_state_link_down{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_state_link_down{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_state_link_down{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_maximum_speed{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_maximum_speed{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_maximum_speed{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_current_speed{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}10000000
+port_current_speed{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}10000000
+port_current_speed{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_receive_frame_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_receive_frame_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_receive_frame_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_packets_transmitted{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}96
+port_packets_transmitted{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}114
+port_packets_transmitted{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}114
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_packets_received{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}99
+port_packets_received{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}80
+port_packets_received{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}80
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_collision_count{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_collision_count{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_collision_count{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_receive_over_run_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_receive_over_run_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_receive_over_run_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_receive_crc_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_receive_crc_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_receive_crc_error{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_transmit_errors{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_transmit_errors{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_transmit_errors{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_receive_drops{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_receive_drops{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_receive_drops{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_transmit_drops{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_transmit_drops{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_transmit_drops{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:76:52:1d:66:42"}0
+port_receive_errors{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="66:ff:2c:e5:61:da"}0
+port_receive_errors{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="2e:32:ac:ec:89:69"}0
+port_receive_errors{id="openflow:9", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:5e:8b:9a:46:45"}0
+
+2018-10-12 18:37:04,772 INFO Response Code: 202
+2018-10-12 18:37:04,773 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,773 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_state_live{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_state_live{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_state_live{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_state_blocked{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_state_blocked{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_state_blocked{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_state_link_down{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}1
+port_state_link_down{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_state_link_down{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_maximum_speed{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_maximum_speed{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_maximum_speed{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}10000000
+port_current_speed{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_current_speed{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}10000000
+port_current_speed{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_receive_frame_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_receive_frame_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_receive_frame_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}127
+port_packets_transmitted{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_packets_transmitted{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}73
+port_packets_transmitted{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}127
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}8
+port_packets_received{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_packets_received{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}123
+port_packets_received{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}8
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_collision_count{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_collision_count{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_collision_count{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_receive_over_run_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_receive_over_run_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_receive_over_run_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_receive_crc_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_receive_crc_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_receive_crc_error{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_transmit_errors{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_transmit_errors{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_transmit_errors{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_receive_drops{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_receive_drops{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_receive_drops{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_transmit_drops{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_transmit_drops{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_transmit_drops{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="56:0f:30:04:a8:c8"}0
+port_receive_errors{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="aa:14:db:12:5e:4c"}0
+port_receive_errors{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="72:b9:55:02:36:ef"}0
+port_receive_errors{id="openflow:8", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="5e:8a:1c:d4:07:43"}0
+
+2018-10-12 18:37:04,775 INFO Response Code: 202
+2018-10-12 18:37:04,777 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,777 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_state_live{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_state_live{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_state_live{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_state_blocked{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_state_blocked{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_state_blocked{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_state_link_down{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_state_link_down{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_state_link_down{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}1
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_maximum_speed{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_maximum_speed{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_maximum_speed{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}10000000
+port_current_speed{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}10000000
+port_current_speed{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}10000000
+port_current_speed{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_receive_frame_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_receive_frame_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_receive_frame_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}81
+port_packets_transmitted{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}122
+port_packets_transmitted{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}123
+port_packets_transmitted{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}115
+port_packets_received{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}72
+port_packets_received{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}73
+port_packets_received{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_collision_count{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_collision_count{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_collision_count{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_receive_over_run_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_receive_over_run_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_receive_over_run_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_receive_crc_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_receive_crc_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_receive_crc_error{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_transmit_errors{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_transmit_errors{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_transmit_errors{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_receive_drops{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_receive_drops{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_receive_drops{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_transmit_drops{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_transmit_drops{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_transmit_drops{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="4a:4a:97:5c:d6:e9"}0
+port_receive_errors{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="b6:ef:bc:39:c9:2b"}0
+port_receive_errors{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ea:1c:76:e8:78:fc"}0
+port_receive_errors{id="openflow:3", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9e:f7:5a:3b:3d:4d"}0
+
+2018-10-12 18:37:04,779 INFO Response Code: 202
+2018-10-12 18:37:04,781 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,781 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_state_live{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_state_live{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_state_live{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_state_blocked{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_state_blocked{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_state_blocked{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_state_link_down{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_state_link_down{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}1
+port_state_link_down{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_maximum_speed{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_maximum_speed{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_maximum_speed{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}10000000
+port_current_speed{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}10000000
+port_current_speed{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_current_speed{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_receive_frame_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_receive_frame_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_receive_frame_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}98
+port_packets_transmitted{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}115
+port_packets_transmitted{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_packets_transmitted{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}116
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}99
+port_packets_received{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}82
+port_packets_received{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_packets_received{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}82
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_collision_count{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_collision_count{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_collision_count{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_receive_over_run_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_receive_over_run_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_receive_over_run_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_receive_crc_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_receive_crc_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_receive_crc_error{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_transmit_errors{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_transmit_errors{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_transmit_errors{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_receive_drops{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_receive_drops{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_receive_drops{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_transmit_drops{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_transmit_drops{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_transmit_drops{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="a2:45:17:d5:33:35"}0
+port_receive_errors{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="42:a4:86:3d:f7:f9"}0
+port_receive_errors{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="4a:f6:6a:b7:bf:47"}0
+port_receive_errors{id="openflow:2", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ba:49:ee:75:cb:c5"}0
+
+2018-10-12 18:37:04,784 INFO Response Code: 202
+2018-10-12 18:37:04,786 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,786 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_state_live{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_state_live{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_state_blocked{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_state_blocked{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}1
+port_state_link_down{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_state_link_down{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_maximum_speed{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_maximum_speed{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_current_speed{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}10000000
+port_current_speed{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_receive_frame_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_receive_frame_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_packets_transmitted{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}99
+port_packets_transmitted{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}98
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_packets_received{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}96
+port_packets_received{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}97
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_collision_count{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_collision_count{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_receive_over_run_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_receive_over_run_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_receive_crc_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_receive_crc_error{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_transmit_errors{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_transmit_errors{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_receive_drops{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_receive_drops{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_transmit_drops{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_transmit_drops{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="92:32:f6:2f:33:45"}0
+port_receive_errors{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="f6:60:25:79:d6:35"}0
+port_receive_errors{id="openflow:1", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="7e:1d:17:d2:96:f3"}0
+
+2018-10-12 18:37:04,789 INFO Response Code: 202
+2018-10-12 18:37:04,790 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,790 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_state_live{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_state_live{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_state_live{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_state_blocked{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_state_blocked{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_state_blocked{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_state_link_down{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_state_link_down{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}1
+port_state_link_down{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_maximum_speed{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_maximum_speed{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_maximum_speed{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}10000000
+port_current_speed{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}10000000
+port_current_speed{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_current_speed{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_receive_frame_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_receive_frame_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_receive_frame_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}127
+port_packets_transmitted{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}127
+port_packets_transmitted{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_packets_transmitted{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}74
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}8
+port_packets_received{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}8
+port_packets_received{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_packets_received{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}123
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_collision_count{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_collision_count{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_collision_count{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_receive_over_run_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_receive_over_run_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_receive_over_run_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_receive_crc_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_receive_crc_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_receive_crc_error{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_transmit_errors{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_transmit_errors{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_transmit_errors{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_receive_drops{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_receive_drops{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_receive_drops{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_transmit_drops{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_transmit_drops{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_transmit_drops{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="8a:b6:10:83:d6:5c"}0
+port_receive_errors{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="b2:a3:fa:d8:f4:79"}0
+port_receive_errors{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="e2:61:ed:03:50:40"}0
+port_receive_errors{id="openflow:7", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="2a:ba:91:fa:0b:2f"}0
+
+2018-10-12 18:37:04,792 INFO Response Code: 202
+2018-10-12 18:37:04,794 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,795 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_state_live{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_state_live{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_state_live{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_state_blocked{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_state_blocked{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_state_blocked{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_state_link_down{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}1
+port_state_link_down{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_state_link_down{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_maximum_speed{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_maximum_speed{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_maximum_speed{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}10000000
+port_current_speed{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_current_speed{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}10000000
+port_current_speed{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_receive_frame_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_receive_frame_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_receive_frame_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}81
+port_packets_transmitted{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_packets_transmitted{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}122
+port_packets_transmitted{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}122
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}114
+port_packets_received{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_packets_received{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}72
+port_packets_received{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}73
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_collision_count{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_collision_count{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_collision_count{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_receive_over_run_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_receive_over_run_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_receive_over_run_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_receive_crc_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_receive_crc_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_receive_crc_error{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_transmit_errors{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_transmit_errors{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_transmit_errors{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_receive_drops{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_receive_drops{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_receive_drops{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}2
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_transmit_drops{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_transmit_drops{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_transmit_drops{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="62:9d:63:56:91:35"}0
+port_receive_errors{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="6e:48:3f:c3:b0:40"}0
+port_receive_errors{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6a:15:1a:58:59:ec"}0
+port_receive_errors{id="openflow:6", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ee:26:59:ae:4d:c1"}0
+
+2018-10-12 18:37:04,797 INFO Response Code: 202
+2018-10-12 18:37:04,798 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,799 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_state_live{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_state_live{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_state_live{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_state_blocked{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_state_blocked{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_state_blocked{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}1
+port_state_link_down{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_state_link_down{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_state_link_down{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_maximum_speed{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_maximum_speed{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_maximum_speed{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_current_speed{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}10000000
+port_current_speed{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}10000000
+port_current_speed{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_receive_frame_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_receive_frame_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_receive_frame_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_packets_transmitted{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}73
+port_packets_transmitted{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}127
+port_packets_transmitted{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}127
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_packets_received{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}123
+port_packets_received{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}8
+port_packets_received{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}8
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_collision_count{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_collision_count{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_collision_count{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_receive_over_run_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_receive_over_run_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_receive_over_run_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_receive_crc_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_receive_crc_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_receive_crc_error{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_transmit_errors{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_transmit_errors{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_transmit_errors{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_receive_drops{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_receive_drops{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_receive_drops{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_transmit_drops{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_transmit_drops{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_transmit_drops{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:27:23:ff:f3:43"}0
+port_receive_errors{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="d2:6d:7b:1b:78:07"}0
+port_receive_errors{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="aa:8a:f8:ce:24:19"}0
+port_receive_errors{id="openflow:5", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="d6:46:f9:74:1e:4d"}0
+
+2018-10-12 18:37:04,803 INFO Response Code: 202
+2018-10-12 18:37:04,804 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,804 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_state_live{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_state_live{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_state_live{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_state_blocked{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_state_blocked{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_state_blocked{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_state_link_down{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_state_link_down{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}1
+port_state_link_down{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_maximum_speed{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_maximum_speed{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_maximum_speed{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}10000000
+port_current_speed{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}10000000
+port_current_speed{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_current_speed{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_receive_frame_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_receive_frame_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_receive_frame_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}74
+port_packets_transmitted{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}127
+port_packets_transmitted{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_packets_transmitted{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}127
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}124
+port_packets_received{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}8
+port_packets_received{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_packets_received{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}8
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_collision_count{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_collision_count{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_collision_count{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_receive_over_run_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_receive_over_run_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_receive_over_run_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_receive_crc_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_receive_crc_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_receive_crc_error{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_transmit_errors{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_transmit_errors{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_transmit_errors{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_receive_drops{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_receive_drops{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_receive_drops{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_transmit_drops{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_transmit_drops{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_transmit_drops{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="c2:0b:a3:8f:5e:00"}0
+port_receive_errors{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="de:e8:40:5c:3f:49"}0
+port_receive_errors{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="fe:f9:dc:0c:c5:48"}0
+port_receive_errors{id="openflow:4", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="fe:4a:84:3e:1c:72"}0
+
+2018-10-12 18:37:04,806 INFO Response Code: 202
+2018-10-12 18:37:04,807 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,807 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_state_live{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_state_live{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_state_live{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_state_blocked{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_state_blocked{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_state_blocked{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_state_link_down{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_state_link_down{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_state_link_down{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}1
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_maximum_speed{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_maximum_speed{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_maximum_speed{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}10000000
+port_current_speed{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}10000000
+port_current_speed{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}10000000
+port_current_speed{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_receive_frame_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_receive_frame_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_receive_frame_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}80
+port_packets_transmitted{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}122
+port_packets_transmitted{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}122
+port_packets_transmitted{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}114
+port_packets_received{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}72
+port_packets_received{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}72
+port_packets_received{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_collision_count{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_collision_count{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_collision_count{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_receive_over_run_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_receive_over_run_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_receive_over_run_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_receive_crc_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_receive_crc_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_receive_crc_error{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_transmit_errors{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_transmit_errors{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_transmit_errors{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_receive_drops{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_receive_drops{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_receive_drops{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_transmit_drops{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_transmit_drops{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_transmit_drops{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="3e:24:c2:fa:4c:7d"}0
+port_receive_errors{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="6e:1c:f2:2d:1b:ee"}0
+port_receive_errors{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="8a:31:3b:6c:5b:bf"}0
+port_receive_errors{id="openflow:10", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="9a:4a:ff:15:d1:4c"}0
+
+2018-10-12 18:37:04,810 INFO Response Code: 202
+2018-10-12 18:37:04,811 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,811 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_state_live{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_state_live{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_state_live{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_state_blocked{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_state_blocked{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_state_blocked{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_state_link_down{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_state_link_down{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_state_link_down{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}1
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_maximum_speed{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_maximum_speed{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_maximum_speed{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}10000000
+port_current_speed{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}10000000
+port_current_speed{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}10000000
+port_current_speed{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_receive_frame_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_receive_frame_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_receive_frame_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}72
+port_packets_transmitted{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}126
+port_packets_transmitted{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}126
+port_packets_transmitted{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}122
+port_packets_received{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}8
+port_packets_received{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}8
+port_packets_received{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_collision_count{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_collision_count{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_collision_count{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_receive_over_run_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_receive_over_run_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_receive_over_run_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_receive_crc_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_receive_crc_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_receive_crc_error{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_transmit_errors{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_transmit_errors{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_transmit_errors{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_receive_drops{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_receive_drops{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_receive_drops{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_transmit_drops{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_transmit_drops{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_transmit_drops{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="52:25:5a:13:fb:c6"}0
+port_receive_errors{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="72:f5:0a:8a:3d:97"}0
+port_receive_errors{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="f2:13:df:ef:c8:b5"}0
+port_receive_errors{id="openflow:11", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:43:63:47:54:49"}0
+
+2018-10-12 18:37:04,813 INFO Response Code: 202
+2018-10-12 18:37:04,815 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,815 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_state_live{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_state_live{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_state_live{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_state_blocked{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_state_blocked{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_state_blocked{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}1
+port_state_link_down{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_state_link_down{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_state_link_down{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_maximum_speed{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_maximum_speed{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_maximum_speed{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_current_speed{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}10000000
+port_current_speed{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}10000000
+port_current_speed{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_receive_frame_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_receive_frame_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_receive_frame_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_packets_transmitted{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}72
+port_packets_transmitted{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}126
+port_packets_transmitted{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}126
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_packets_received{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}122
+port_packets_received{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}8
+port_packets_received{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}8
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_collision_count{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_collision_count{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_collision_count{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_receive_over_run_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_receive_over_run_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_receive_over_run_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_receive_crc_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_receive_crc_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_receive_crc_error{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_transmit_errors{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_transmit_errors{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_transmit_errors{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_receive_drops{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_receive_drops{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_receive_drops{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_transmit_drops{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_transmit_drops{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_transmit_drops{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="16:62:78:03:f4:4a"}0
+port_receive_errors{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="8e:cc:34:f4:f2:9d"}0
+port_receive_errors{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="76:a1:83:7b:a4:79"}0
+port_receive_errors{id="openflow:12", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="2a:ec:40:e6:dc:03"}0
+
+2018-10-12 18:37:04,820 INFO Response Code: 202
+2018-10-12 18:37:04,821 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,821 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_state_live{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_state_live{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_state_live{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_state_blocked{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_state_blocked{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_state_blocked{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_state_link_down{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_state_link_down{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}1
+port_state_link_down{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_maximum_speed{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_maximum_speed{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_maximum_speed{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}10000000
+port_current_speed{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}10000000
+port_current_speed{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_current_speed{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_receive_frame_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_receive_frame_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_receive_frame_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}80
+port_packets_transmitted{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}122
+port_packets_transmitted{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_packets_transmitted{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}122
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}114
+port_packets_received{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}72
+port_packets_received{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_packets_received{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}72
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_collision_count{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_collision_count{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_collision_count{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_receive_over_run_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_receive_over_run_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_receive_over_run_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_receive_crc_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_receive_crc_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_receive_crc_error{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_transmit_errors{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_transmit_errors{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_transmit_errors{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_receive_drops{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_receive_drops{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_receive_drops{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_transmit_drops{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_transmit_drops{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_transmit_drops{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="5a:77:ed:f7:4a:6b"}0
+port_receive_errors{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="4a:64:4f:f0:31:39"}0
+port_receive_errors{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="2e:af:fa:bf:07:42"}0
+port_receive_errors{id="openflow:13", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="62:56:79:91:08:d0"}0
+
+2018-10-12 18:37:04,824 INFO Response Code: 202
+2018-10-12 18:37:04,825 INFO Post on:http://192.168.201.2:9091/metrics/job/ports/instance/test 
+
+2018-10-12 18:37:04,825 INFO Post ports metrics: 
+# TYPE port_state_live gauge
+port_state_live{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_state_live{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_state_live{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_state_live{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_state_blocked gauge
+port_state_blocked{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_state_blocked{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_state_blocked{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_state_blocked{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_state_link_down gauge
+port_state_link_down{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_state_link_down{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_state_link_down{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}1
+port_state_link_down{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_maximum_speed gauge
+port_maximum_speed{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_maximum_speed{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_maximum_speed{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_maximum_speed{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_current_speed gauge
+port_current_speed{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}10000000
+port_current_speed{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}10000000
+port_current_speed{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_current_speed{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}10000000
+# TYPE port_receive_frame_error gauge
+port_receive_frame_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_receive_frame_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_receive_frame_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_receive_frame_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_packets_transmitted gauge
+port_packets_transmitted{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}127
+port_packets_transmitted{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}127
+port_packets_transmitted{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_packets_transmitted{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}73
+# TYPE port_packets_received gauge
+port_packets_received{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}8
+port_packets_received{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}8
+port_packets_received{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_packets_received{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}123
+# TYPE port_collision_count gauge
+port_collision_count{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_collision_count{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_collision_count{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_collision_count{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_receive_over_run_error gauge
+port_receive_over_run_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_receive_over_run_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_receive_over_run_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_receive_over_run_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_receive_crc_error gauge
+port_receive_crc_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_receive_crc_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_receive_crc_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_receive_crc_error{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_transmit_errors gauge
+port_transmit_errors{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_transmit_errors{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_transmit_errors{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_transmit_errors{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_receive_drops gauge
+port_receive_drops{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_receive_drops{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_receive_drops{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_receive_drops{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_transmit_drops gauge
+port_transmit_drops{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_transmit_drops{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_transmit_drops{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_transmit_drops{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+# TYPE port_receive_errors gauge
+port_receive_errors{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="2", mac="c6:46:3f:a7:f7:5f"}0
+port_receive_errors{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="1", mac="ae:4a:3a:79:33:43"}0
+port_receive_errors{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="4294967294", mac="ca:00:82:98:aa:4a"}0
+port_receive_errors{id="openflow:14", serial_number="None", hardware="Open vSwitch", manufacturer="Nicira, Inc.", software="2.5.4",port="3", mac="32:7a:ee:2e:9c:3e"}0
+
+2018-10-12 18:37:04,827 INFO Response Code: 202

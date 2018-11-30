@@ -1,0 +1,130 @@
+2018-10-12 18:17:48,560 INFO Openstack Data Collector
+2018-10-12 18:17:48,562 INFO keystone_url: http://192.168.137.11:5000/v3/auth/tokens
+2018-10-12 18:17:48,562 INFO node_name: test_vim
+2018-10-12 18:17:48,562 INFO tenants: [{"pushgw_url": ["http://localhost:9091/metrics"], "password": "86qFacpW", "user_name": "transformer", "name": "transformer"}]
+2018-10-12 18:17:49,254 INFO Token: gAAAAABbwMksgZBiGWG9jC1yi8JhiBnQTCdta6REeT0ZGF5FsXrjZgC_rexkaQquu6wuzmmMVOBH2knNuYZyaOk6Z0LYkl-CEQcJM5M8-_rJUI1vooaZcy1Yaof9Xz5GE9VCukdJAUfGvq3G7L_vzWjhFu9bII73PAQTjAyGUia9l4gXQAkhyiM
+2018-10-12 18:17:50,824 INFO Post Limits: 
+# TYPE vim_maxServerMeta gauge
+vim_maxServerMeta 128
+# TYPE vim_maxTotalInstances gauge
+vim_maxTotalInstances 10
+# TYPE vim_maxPersonality gauge
+vim_maxPersonality 5
+# TYPE vim_totalServerGroupsUsed gauge
+vim_totalServerGroupsUsed 0
+# TYPE vim_maxImageMeta gauge
+vim_maxImageMeta 128
+# TYPE vim_maxPersonalitySize gauge
+vim_maxPersonalitySize 10240
+# TYPE vim_maxTotalRAMSize gauge
+vim_maxTotalRAMSize 51200
+# TYPE vim_maxServerGroups gauge
+vim_maxServerGroups 10
+# TYPE vim_maxSecurityGroupRules gauge
+vim_maxSecurityGroupRules 20
+# TYPE vim_maxTotalKeypairs gauge
+vim_maxTotalKeypairs 100
+# TYPE vim_totalCoresUsed gauge
+vim_totalCoresUsed 6
+# TYPE vim_totalRAMUsed gauge
+vim_totalRAMUsed 12288
+# TYPE vim_maxSecurityGroups gauge
+vim_maxSecurityGroups 10
+# TYPE vim_totalFloatingIpsUsed gauge
+vim_totalFloatingIpsUsed 0
+# TYPE vim_totalInstancesUsed gauge
+vim_totalInstancesUsed 2
+# TYPE vim_maxServerGroupMembers gauge
+vim_maxServerGroupMembers 10
+# TYPE vim_maxTotalFloatingIps gauge
+vim_maxTotalFloatingIps 10
+# TYPE vim_totalSecurityGroupsUsed gauge
+vim_totalSecurityGroupsUsed 1
+# TYPE vim_maxTotalCores gauge
+vim_maxTotalCores 20
+
+2018-10-12 18:17:50,824 INFO pushdata
+
+2018-10-12 18:17:50,825 INFO url:http://localhost:9091/metrics/job/limits/instance/test_vim/vim_tenant/transformer
+
+2018-10-12 18:17:50,825 DEBUG data:# TYPE vim_maxServerMeta gauge
+vim_maxServerMeta 128
+# TYPE vim_maxTotalInstances gauge
+vim_maxTotalInstances 10
+# TYPE vim_maxPersonality gauge
+vim_maxPersonality 5
+# TYPE vim_totalServerGroupsUsed gauge
+vim_totalServerGroupsUsed 0
+# TYPE vim_maxImageMeta gauge
+vim_maxImageMeta 128
+# TYPE vim_maxPersonalitySize gauge
+vim_maxPersonalitySize 10240
+# TYPE vim_maxTotalRAMSize gauge
+vim_maxTotalRAMSize 51200
+# TYPE vim_maxServerGroups gauge
+vim_maxServerGroups 10
+# TYPE vim_maxSecurityGroupRules gauge
+vim_maxSecurityGroupRules 20
+# TYPE vim_maxTotalKeypairs gauge
+vim_maxTotalKeypairs 100
+# TYPE vim_totalCoresUsed gauge
+vim_totalCoresUsed 6
+# TYPE vim_totalRAMUsed gauge
+vim_totalRAMUsed 12288
+# TYPE vim_maxSecurityGroups gauge
+vim_maxSecurityGroups 10
+# TYPE vim_totalFloatingIpsUsed gauge
+vim_totalFloatingIpsUsed 0
+# TYPE vim_totalInstancesUsed gauge
+vim_totalInstancesUsed 2
+# TYPE vim_maxServerGroupMembers gauge
+vim_maxServerGroupMembers 10
+# TYPE vim_maxTotalFloatingIps gauge
+vim_maxTotalFloatingIps 10
+# TYPE vim_totalSecurityGroupsUsed gauge
+vim_totalSecurityGroupsUsed 1
+# TYPE vim_maxTotalCores gauge
+vim_maxTotalCores 20
+
+
+2018-10-12 18:17:50,826 INFO Response Code: 202
+2018-10-12 18:17:53,027 WARNING Error: HTTP Error 403: Forbidden
+2018-10-12 18:17:53,039 INFO Post vm metrics: 
+# TYPE vms_sum gauge
+vms_sum 2
+# TYPE vms_state gauge
+vms_state{state="ACTIVE"} 1
+vms_state{state="SHUTOFF"} 1
+# TYPE vm_last_update gauge
+vm_last_update{uuid="8c909b46-b7ff-4983-85e2-d2a169c1fa27", , network_1="transformer-private-net:192.168.0.7:192.168.137.39", created="2018-07-19T08:03:43Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="cloudify-manager-18.2.28", image_id="e8137aa3-c53d-4bd0-b2c2-4ee251697839"} 1535979195.0
+vm_last_update{uuid="804c7741-cff6-449a-b5d9-a493ade6f42e", , network_1="transformer-private-net:192.168.0.11:192.168.137.43", created="2018-07-18T13:19:34Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="opendaylight_test", image_id="c7272f5c-bbfc-4650-a9dc-b1e04d143453"} 1532339299.0
+# TYPE vm_power_state gauge
+vm_power_state{uuid="8c909b46-b7ff-4983-85e2-d2a169c1fa27", , network_1="transformer-private-net:192.168.0.7:192.168.137.39", created="2018-07-19T08:03:43Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="cloudify-manager-18.2.28", image_id="e8137aa3-c53d-4bd0-b2c2-4ee251697839"} 1
+vm_power_state{uuid="804c7741-cff6-449a-b5d9-a493ade6f42e", , network_1="transformer-private-net:192.168.0.11:192.168.137.43", created="2018-07-18T13:19:34Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="opendaylight_test", image_id="c7272f5c-bbfc-4650-a9dc-b1e04d143453"} 4
+# TYPE vm_status gauge
+vm_status{uuid="8c909b46-b7ff-4983-85e2-d2a169c1fa27", , network_1="transformer-private-net:192.168.0.7:192.168.137.39", created="2018-07-19T08:03:43Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="cloudify-manager-18.2.28", image_id="e8137aa3-c53d-4bd0-b2c2-4ee251697839"} 656784738669
+vm_status{uuid="804c7741-cff6-449a-b5d9-a493ade6f42e", , network_1="transformer-private-net:192.168.0.11:192.168.137.43", created="2018-07-18T13:19:34Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="opendaylight_test", image_id="c7272f5c-bbfc-4650-a9dc-b1e04d143453"} 83728584797070
+
+2018-10-12 18:17:53,040 INFO push url:%s
+http://localhost:9091/metrics
+2018-10-12 18:17:53,040 INFO pushdata
+
+2018-10-12 18:17:53,040 INFO url:http://localhost:9091/metrics/job/vms/instance/test_vim/vim_tenant/transformer
+
+2018-10-12 18:17:53,040 DEBUG data:# TYPE vms_sum gauge
+vms_sum 2
+# TYPE vms_state gauge
+vms_state{state="ACTIVE"} 1
+vms_state{state="SHUTOFF"} 1
+# TYPE vm_last_update gauge
+vm_last_update{uuid="8c909b46-b7ff-4983-85e2-d2a169c1fa27", , network_1="transformer-private-net:192.168.0.7:192.168.137.39", created="2018-07-19T08:03:43Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="cloudify-manager-18.2.28", image_id="e8137aa3-c53d-4bd0-b2c2-4ee251697839"} 1535979195.0
+vm_last_update{uuid="804c7741-cff6-449a-b5d9-a493ade6f42e", , network_1="transformer-private-net:192.168.0.11:192.168.137.43", created="2018-07-18T13:19:34Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="opendaylight_test", image_id="c7272f5c-bbfc-4650-a9dc-b1e04d143453"} 1532339299.0
+# TYPE vm_power_state gauge
+vm_power_state{uuid="8c909b46-b7ff-4983-85e2-d2a169c1fa27", , network_1="transformer-private-net:192.168.0.7:192.168.137.39", created="2018-07-19T08:03:43Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="cloudify-manager-18.2.28", image_id="e8137aa3-c53d-4bd0-b2c2-4ee251697839"} 1
+vm_power_state{uuid="804c7741-cff6-449a-b5d9-a493ade6f42e", , network_1="transformer-private-net:192.168.0.11:192.168.137.43", created="2018-07-18T13:19:34Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="opendaylight_test", image_id="c7272f5c-bbfc-4650-a9dc-b1e04d143453"} 4
+# TYPE vm_status gauge
+vm_status{uuid="8c909b46-b7ff-4983-85e2-d2a169c1fa27", , network_1="transformer-private-net:192.168.0.7:192.168.137.39", created="2018-07-19T08:03:43Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="cloudify-manager-18.2.28", image_id="e8137aa3-c53d-4bd0-b2c2-4ee251697839"} 656784738669
+vm_status{uuid="804c7741-cff6-449a-b5d9-a493ade6f42e", , network_1="transformer-private-net:192.168.0.11:192.168.137.43", created="2018-07-18T13:19:34Z", tenant_id="b93163a4a22b46c7a57a1f50f60d94d4", user_id="33e03520fc4f47cb8a147461dd883abf", name="opendaylight_test", image_id="c7272f5c-bbfc-4650-a9dc-b1e04d143453"} 83728584797070
+
+
+2018-10-12 18:17:53,042 WARNING Error: HTTP Error 400: Bad Request
