@@ -1,0 +1,3 @@
+/home/mcapitani/5GT/mon-repo/config-manager-nxw/src/test/java/it/nextworks/nfvmano/configmanager/TestMainVerticle.java
+/home/mcapitani/5GT/mon-repo/config-manager-nxw/src/test/java/it/nextworks/nfvmano/configmanager/sb/grafana/GrafanaDashboardServiceTest.java
+/home/mcapitani/5GT/mon-repo/config-manager-nxw/src/test/java/it/nextworks/nfvmano/configmanager/exporters/ExporterServiceTest.java

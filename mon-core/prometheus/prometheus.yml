@@ -1,0 +1,43 @@
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: ['localhost:9093']
+global: {evaluation_interval: 10s, scrape_interval: 15s}
+rule_files: [alert.rules]
+scrape_configs:
+- job_name: prometheus
+  scrape_interval: 5s
+  static_configs:
+  - targets: ['localhost:9090']
+- job_name: n-exp-mon
+  scrape_interval: 5s
+  static_configs:
+  - targets: ['localhost:9100']
+- job_name: test-app
+  scrape_interval: 5s
+  static_configs:
+  - targets: ['localhost:9183']
+- job_name: tc-1
+  scrape_interval: 10s
+  static_configs:
+  - targets: ['localhost:9876']
+- job_name: alertmanager
+  scrape_interval: 10s
+  static_configs:
+  - targets: ['localhost:9093']
+- job_name: cache1
+  scrape_interval: 10s
+  static_configs:
+  - targets: ['10.5.1.162:9100']
+- job_name: cache2
+  scrape_interval: 10s
+  static_configs:
+  - targets: ['10.5.1.161:9100']
+- job_name: origin-server
+  scrape_interval: 10s
+  static_configs:
+  - targets: ['10.5.1.160:9100']
+- job_name: webserver
+  scrape_interval: 10s
+  static_configs:
+  - targets: ['10.5.1.163:9100']

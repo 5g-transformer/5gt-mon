@@ -1,0 +1,16 @@
+groups:
+- name: example
+  rules:
+  - alert: HighRateRequest
+    expr: sum(rate(prometheus_http_request_duration_seconds_count[10s])) > 2
+    labels:
+      severity: page
+    annotations:
+      summary: High Rate Request
+  - alert: HighAppLoad
+    expr: avg_over_time(app_index_serving[30s]) > 3
+    labels:
+      severity: page
+    annotations:
+      summary: App request queue filling up
+
