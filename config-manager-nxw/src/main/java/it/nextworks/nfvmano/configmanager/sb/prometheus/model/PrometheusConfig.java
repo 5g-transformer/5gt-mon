@@ -32,20 +32,30 @@ import java.util.StringJoiner;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PrometheusConfig {
 
-    private List<ScrapeConfigs> scrapeConfigs;
+    private List<ScrapeConfigs> scrapeConfigs = new ArrayList<>();
     private Global global;
     private Alerting alerting;
-    private List<String> ruleFiles;
+    private List<String> ruleFiles = new ArrayList<>();
 
     public PrometheusConfig() {
-        this.scrapeConfigs = new ArrayList<>();
-        this.ruleFiles = new ArrayList<>();
+
     }
 
-    public PrometheusConfig(List<ScrapeConfigs> scrapeConfigs, Global global, Alerting alerting, List<String> ruleFiles) {
+    public PrometheusConfig(
+            List<ScrapeConfigs> scrapeConfigs,
+            Global global,
+            Alerting alerting,
+            List<String> ruleFiles
+    ) {
+        if (scrapeConfigs == null) {
+            scrapeConfigs = new ArrayList<>();
+        }
         this.scrapeConfigs = scrapeConfigs;
         this.global = global;
         this.alerting = alerting;
+        if (ruleFiles == null) {
+            ruleFiles = new ArrayList<>();
+        }
         this.ruleFiles = ruleFiles;
     }
 
@@ -55,12 +65,15 @@ public class PrometheusConfig {
     }
 
     @JsonProperty("scrape_configs")
-    private void setScrapeConfigs(List<ScrapeConfigs> scrapeConfigs) {
+    public void setScrapeConfigs(List<ScrapeConfigs> scrapeConfigs) {
         this.scrapeConfigs = scrapeConfigs;
     }
 
     public void addScrapeConfig(ScrapeConfigs scrapeConfig) {
-        this.scrapeConfigs.add(scrapeConfig);
+        if (scrapeConfigs == null) {
+            scrapeConfigs = new ArrayList<>();
+        }
+        scrapeConfigs.add(scrapeConfig);
     }
 
     public void removeScrapeConfig(ScrapeConfigs scrapeConfig) {
@@ -79,7 +92,7 @@ public class PrometheusConfig {
 
     public void addScrapeConfig(String jobName, String scrapeInterval, StaticConfigs... staticConfigs) {
         ScrapeConfigs scrapeConfig = new ScrapeConfigs(jobName, scrapeInterval, staticConfigs);
-        this.scrapeConfigs.add(scrapeConfig);
+        addScrapeConfig(scrapeConfig);
     }
 
     @JsonProperty("global")

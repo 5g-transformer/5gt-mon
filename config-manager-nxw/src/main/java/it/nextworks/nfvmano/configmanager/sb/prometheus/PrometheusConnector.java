@@ -54,17 +54,80 @@ public class PrometheusConnector {
 
     private String promPid;
 
+    private String promServiceName;
+
+    private void reloadPrometheusConfig() {
+        try {
+            Process ps;
+            if (promServiceName != null) {
+                ps = runtime.exec(new String[]{"sudo", "systemctl", "kill", "-s", "SIGHUP", promServiceName});
+            } else if (promPid != null) {
+                ps = runtime.exec(new String[]{"kill", "-SIGHUP", promPid});
+            } else {
+                throw new IllegalStateException("No prometheus reloading method found.");
+            }
+            try {
+                boolean done = ps.waitFor(1000, TimeUnit.MILLISECONDS);
+                if (!done) {
+                    throw new IllegalStateException(
+                            "Error reloading prometheus config: process timed out"
+                    );
+                }
+                if (ps.exitValue() != 0) {
+                    throw new IllegalStateException(String.format(
+                            "Prometheus reloading failed with exit code %d",
+                            ps.exitValue()
+                    ));
+                }
+            } catch (InterruptedException e) {
+                throw new IllegalStateException("Interrupted");
+            }
+        } catch (IOException e) {
+            throw new IllegalStateException(String.format(
+                    "Could not reload prometheus configuration: %s",
+                    e.getMessage()
+            ));
+        }
+    }
+
+    private String getPromServiceName() {
+        try {
+            for (String promName: new String[]{"prometheus", "prometheus-core", "prometheus-server"}) {
+                Process ps = runtime.exec(new String[]{"systemctl", "is-active", "--quiet", promName});
+                try {
+                    boolean done = ps.waitFor(1000, TimeUnit.MILLISECONDS);
+                    if (!done) {
+                        throw new IllegalStateException(
+                                "Error fetching prometheus PID: process timed out"
+                        );
+                    }
+                    if (ps.exitValue() == 0) {
+                        return promName;
+                    }
+                } catch (InterruptedException exc) {
+                    throw new IllegalStateException("Interrupted");
+                }
+            }
+            return null; // I.e. none of the names was a running service
+        } catch (IOException exc) {
+            throw new IllegalStateException(
+                    String.format("Error fetching prometheus service name: %s", exc.getMessage()),
+                    exc
+            );
+        }
+    }
+
     private String getPrometheusPid() {
         try {
             Process ps = runtime.exec(new String[]{"pgrep", "prometheus"});
             try {
-                InputStream stdOut = ps.getInputStream();
                 boolean done = ps.waitFor(1000, TimeUnit.MILLISECONDS);
                 if (!done) {
                     throw new IllegalStateException(
                             "Error fetching prometheus PID: process timed out"
                     );
                 }
+                InputStream stdOut = ps.getInputStream();
                 Scanner s = new Scanner(stdOut);
                 int pid = -1;
                 while (s.hasNext()) {
@@ -95,13 +158,25 @@ public class PrometheusConnector {
     public PrometheusConnector(String promConfigPath, String alertRulesPath) {
         promConfig = new File(promConfigPath);
         if (!promConfig.isFile()) {
-            throw new IllegalArgumentException("Illegal prometheus config file path");
+            throw new IllegalArgumentException(String.format(
+                    "Illegal prometheus config file path '%s'",
+                    promConfigPath
+            ));
         }
         alertRules = new File(alertRulesPath);
         if (!alertRules.isFile()) {
-            throw new IllegalArgumentException("Illegal alert rules path");
+            throw new IllegalArgumentException(String.format(
+                    "Illegal alert rules path '%s'",
+                    alertRulesPath
+            ));
         }
-        promPid = getPrometheusPid();
+        String promServiceName = getPromServiceName();
+        if (promServiceName != null) { // Actually found a service
+            this.promServiceName = promServiceName;
+            log.debug("Prometheus service name is {}.", promPid);
+        } else {
+            promPid = getPrometheusPid();
+        }
         log.debug("Prometheus PID is {}.", promPid);
     }
 
@@ -115,37 +190,8 @@ public class PrometheusConnector {
 
     public void setConfig(PrometheusConfig newConfig) {
         try {
-            // Substitute the scrape_configs field with the new config
-            boolean inScrapeConfigs = false;
-            Iterator<String> iterator = Files.readAllLines(promConfig.toPath()).iterator();
-            List<String> updated = new LinkedList<>();
-            while (iterator.hasNext()) {
-                String cur = iterator.next();
-                if (!inScrapeConfigs) {
-                    if (cur.startsWith("scrape_configs:")) {
-                        // Start removing (but keep this line)
-                        updated.add(cur);
-                        inScrapeConfigs = true;
-                    } else {
-                        // Keep it unchanged
-                        updated.add(cur);
-                    }
-                } else { // In scrape_configs
-                    if (!( cur.startsWith(" ") || cur.startsWith("-") || cur.startsWith("#") )) {
-                        // We reached the end of the scrape_configs field
-                        inScrapeConfigs = false;
-                        // Append the new scrape_configs
-                        String addition = mapper.writeValueAsString(newConfig.getScrapeConfigs());
-                        String actualUsed = addition.substring(4); // skip the ---\n preface
-                        updated.addAll(Arrays.asList(actualUsed.split("\n")));
-                        // Then keep writing the rest of the file
-                        updated.add(cur);
-                    }
-                    // else do nothing, i.e. remove the line
-                }
-            }
-            Files.write(promConfig.toPath(), updated);
-            runtime.exec(new String[] {"kill", "-SIGHUP", promPid});
+            Files.write(promConfig.toPath(), mapper.writeValueAsBytes(newConfig));
+            reloadPrometheusConfig();
         } catch (JsonProcessingException e) {
             log.debug("Illegal configuration provided: {}", e.getMessage());
             throw new IllegalArgumentException("Provided configuration is illegal", e);
