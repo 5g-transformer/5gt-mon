@@ -2,9 +2,9 @@
 swagger: '2.0'
 
 info:
-  description: The API of the Prometheus Manager.
-  version: '0.1'
-  title: Prometheus Manager API
+  description: The API of the 5GT Monitoring Configuration Manager.
+  version: '0.6'
+  title: Configuration Manager API
   contact:
     name: Marco Capitani
     url: http://www.nextworks.it
@@ -488,7 +488,7 @@ definitions:
       collectionPeriod:
         type: integer
         format: int32
-        description: the interval (in milliseconds) between scrapes
+        description: the interval (in seconds) between scrapes
 
   Exporter:
     type: object
