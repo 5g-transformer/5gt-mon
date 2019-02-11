@@ -554,6 +554,7 @@ definitions:
         - eq
         - neq
       target:
+        description: the URL to which the notification of the violated threshold should be sent
         type: string
         format: URI
   
