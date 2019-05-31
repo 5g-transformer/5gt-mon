@@ -18,6 +18,10 @@ package it.nextworks.nfvmano.configmanager.sb.prometheus.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 /**
  * Created by json2java on 22/06/17.
  * json2java author: Marco Capitani (m.capitani AT nextworks DOT it)
@@ -26,25 +30,41 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Rules {
 
     @JsonProperty("annotations")
-    private Annotations annotations;
+    private Map<String, String> annotations = new HashMap<>();
     @JsonProperty("expr")
     private String expr;
     @JsonProperty("alert")
     private String alert;
     @JsonProperty("labels")
-    private Labels labels;
+    private Map<String, String> labels = new HashMap<>();
+    @JsonProperty("for")
+    private String forTime;
 
     public Rules() {
 
     }
 
+    public Rules(
+            Map<String, String> annotations,
+            String expr,
+            String alert,
+            Map<String, String> labels,
+            String forTime
+    ) {
+        this.annotations = annotations;
+        this.expr = expr;
+        this.alert = alert;
+        this.labels = labels;
+        this.forTime = forTime;
+    }
+
     @JsonProperty("annotations")
-    public Annotations getAnnotations() {
+    public Map<String, String> getAnnotations() {
         return annotations;
     }
 
     @JsonProperty("annotations")
-    private void setAnnotations(Annotations annotations) {
+    public void setAnnotations(Map<String, String> annotations) {
         this.annotations = annotations;
     }
 
@@ -54,7 +74,7 @@ public class Rules {
     }
 
     @JsonProperty("expr")
-    private void setExpr(String expr) {
+    public void setExpr(String expr) {
         this.expr = expr;
     }
 
@@ -64,18 +84,44 @@ public class Rules {
     }
 
     @JsonProperty("alert")
-    private void setAlert(String alert) {
+    public void setAlert(String alert) {
         this.alert = alert;
     }
 
     @JsonProperty("labels")
-    public Labels getLabels() {
+    public Map<String, String> getLabels() {
         return labels;
     }
 
     @JsonProperty("labels")
-    private void setLabels(Labels labels) {
+    public void setLabels(Map<String, String> labels) {
         this.labels = labels;
     }
 
+    @JsonProperty("for")
+    public String getForTime() {
+        return forTime;
+    }
+
+    @JsonProperty("for")
+    public void setForTime(String forTime) {
+        this.forTime = forTime;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rules)) return false;
+        Rules rules = (Rules) o;
+        return Objects.equals(getAnnotations(), rules.getAnnotations()) &&
+                Objects.equals(getExpr(), rules.getExpr()) &&
+                Objects.equals(getAlert(), rules.getAlert()) &&
+                Objects.equals(getLabels(), rules.getLabels()) &&
+                Objects.equals(getForTime(), rules.getForTime());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getAnnotations(), getExpr(), getAlert(), getLabels(), getForTime());
+    }
 }

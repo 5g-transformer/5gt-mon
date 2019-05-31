@@ -11,7 +11,7 @@ printf "\n\n==================\nSent Request\n==================\n\n"
 
 printf "POST http://localhost:8989/prom-manager/dashboard\n"
 
-curl -X POST http://localhost:8989/prom-manager/dashboard -H "Accept: application/json" -d @dashboard-request.json | jq .
+curl -X POST http://localhost:8989/prom-manager/dashboard -H "Accept: application/json" -H "Content-Type: application/json" -d @dashboard-request.json | jq .
 
 printf "\n\n==================\n==================\n"
 

@@ -18,6 +18,8 @@ package it.nextworks.nfvmano.configmanager.sb.grafana.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.util.StringJoiner;
+
 /**
  * Created by Marco Capitani on 29/10/18.
  *
@@ -52,5 +54,18 @@ public class PostDashboardResponse {
         } else {
             return status;
         }
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", PostDashboardResponse.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("slug='" + slug + "'")
+                .add("status='" + status + "'")
+                .add("message='" + message + "'")
+                .add("uid='" + uid + "'")
+                .add("url='" + url + "'")
+                .add("version=" + version)
+                .toString();
     }
 }

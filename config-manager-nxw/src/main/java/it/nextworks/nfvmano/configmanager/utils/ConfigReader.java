@@ -57,6 +57,10 @@ public class ConfigReader {
         return Double.valueOf(getProperty(key));
     }
 
+    public boolean getBoolProperty(String key) {
+        return Boolean.parseBoolean(getProperty(key));
+    }
+
     private void init() throws IOException {
 
         InputStream inputStream;

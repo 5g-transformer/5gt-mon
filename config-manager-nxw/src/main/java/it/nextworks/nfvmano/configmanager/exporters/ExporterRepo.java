@@ -16,9 +16,11 @@
 
 package it.nextworks.nfvmano.configmanager.exporters;
 
+import io.vertx.core.Future;
 import it.nextworks.nfvmano.configmanager.exporters.model.Exporter;
 import it.nextworks.nfvmano.configmanager.exporters.model.ExporterDescription;
 
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -28,17 +30,17 @@ import java.util.Set;
  */
 public interface ExporterRepo {
 
-    Exporter save(ExporterDescription description);
+    Future<Exporter> save(ExporterDescription description);
 
-    Exporter save(Exporter exporter);
+    Future<Exporter> save(Exporter exporter);
 
-    Exporter update(Exporter exporter);
+    Future<Exporter> update(Exporter exporter);
 
-    Exporter findById(String exporterId);
+    Future<Optional<Exporter>> findById(String exporterId);
 
-    Set<String> deleteById(String exporterId);  // Implicitly not strict
+    Future<Set<String>> deleteById(String exporterId);  // Implicitly not strict
 
-    Set<String> deleteById(String exporterId, boolean strict);
+    Future<Set<String>> deleteById(String exporterId, boolean strict);
 
-    Set<Exporter> findAll();
+    Future<Set<Exporter>> findAll();
 }

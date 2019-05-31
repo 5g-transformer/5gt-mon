@@ -16,13 +16,13 @@
 
 package it.nextworks.nfvmano.configmanager.exporters;
 
+import io.vertx.core.Future;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.handler.impl.HttpStatusException;
-import it.nextworks.nfvmano.configmanager.common.ErrorResponse;
 import it.nextworks.nfvmano.configmanager.exporters.model.Exporter;
 import it.nextworks.nfvmano.configmanager.exporters.model.ExporterDescription;
 import it.nextworks.nfvmano.configmanager.exporters.model.ExporterQueryResult;
-import it.nextworks.nfvmano.configmanager.model.DeleteResponse;
+import it.nextworks.nfvmano.configmanager.common.DeleteResponse;
 import it.nextworks.nfvmano.configmanager.utils.ContextUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,7 +49,7 @@ public class ExporterController {
         log.info("Received call POST exporter.");
         ExporterDescription desc = ctx.get("_parsed");
         log.debug("Exporter description:\n{}", desc);
-        ContextUtils.runBlockingAndRespond(
+        ContextUtils.handleAndRespond(
                 ctx,
                 () -> repo.save(desc),
                 "save exporter",
@@ -60,12 +60,9 @@ public class ExporterController {
 
     public void getAllExporters(RoutingContext ctx) {
         log.info("Received call GET all exporter.");
-        ContextUtils.runBlockingAndRespond(
+        ContextUtils.handleAndRespond(
                 ctx,
-                () -> {
-                    Set<Exporter> all = repo.findAll();
-                    return new ExporterQueryResult(all);
-                },
+                () -> repo.findAll().map(ExporterQueryResult::new),
                 "get all exporter",
                 "GET all exporter"
         );
@@ -74,20 +71,13 @@ public class ExporterController {
     public void getExporter(RoutingContext ctx) {
         String expId = ctx.pathParam("expId");
         log.info("Received call GET exporter {}.", expId);
-        ContextUtils.runBlockingLogging(
+        ContextUtils.handleLogging(
                 ctx,
                 () -> repo.findById(expId),
                 "get exporter",
                 exporter -> {
-                    if (exporter == null) {
-                        ctx.fail(new HttpStatusException(
-                                404,
-                                String.format("No exporter with id %s", expId)
-                        ));
-                    } else {
-                        ContextUtils.respond(ctx, exporter);
-                    }
                     log.info("GET exporter {} call completed.", expId);
+                    ContextUtils.respond(ctx, exporter); // Respond will take care of the optional
                 }
         );
     }
@@ -95,13 +85,15 @@ public class ExporterController {
     public void deleteExporter(RoutingContext ctx) {
         String expId = ctx.pathParam("expId");
         log.info("Received call DELETE exporter {}.", expId);
-        ContextUtils.runBlockingAndRespond(
+        ContextUtils.handleAndRespond(
                 ctx,
                 () -> {
-                    Set<String> deleted = repo.deleteById(expId);
-                    DeleteResponse response = new DeleteResponse();
-                    response.setDeleted(new ArrayList<>(deleted));
-                    return response;
+                    Future<Set<String>> future = repo.deleteById(expId);
+                    return future.map(deleted -> {
+                        DeleteResponse response = new DeleteResponse();
+                        response.setDeleted(new ArrayList<>(deleted));
+                        return response;
+                    });
                 },
                 "delete exporter",
                 "DELETE exporter"
@@ -120,7 +112,7 @@ public class ExporterController {
             ));
             log.info("PUT exporter {} call completed.", expId);
         } else {
-            ContextUtils.runBlockingAndRespond(
+            ContextUtils.handleAndRespond(
                     ctx,
                     () -> repo.update(exporter),
                     "update exporter",

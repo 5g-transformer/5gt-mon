@@ -18,7 +18,9 @@ package it.nextworks.nfvmano.configmanager.sb.prometheus.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.StringJoiner;
 
@@ -31,12 +33,16 @@ public class StaticConfigs {
 
     private List<String> targets;
 
+    private Map<String, String> labels = new HashMap<>();
+
+
     public StaticConfigs() {
 
     }
 
-    public StaticConfigs(List<String> targets) {
+    public StaticConfigs(List<String> targets, Map<String, String> labels) {
         this.targets = targets;
+        this.labels = labels;
     }
 
     @JsonProperty("targets")
@@ -47,6 +53,16 @@ public class StaticConfigs {
     @JsonProperty("targets")
     private void setTargets(List<String> targets) {
         this.targets = targets;
+    }
+
+    @JsonProperty("labels")
+    public Map<String, String> getLabels() {
+        return labels;
+    }
+
+    @JsonProperty("labels")
+    public void setLabels(Map<String, String> labels) {
+        this.labels = labels;
     }
 
     @Override

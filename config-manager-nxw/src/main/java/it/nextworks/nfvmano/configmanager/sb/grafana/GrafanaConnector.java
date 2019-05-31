@@ -43,9 +43,23 @@ public class GrafanaConnector {
 
     private String authHeader;
 
+    private String baseUrl;
+
+    private boolean reportFullUrl;
+
     public GrafanaConnector(WebClient client, String bearerToken) {
+        this(client, bearerToken, null, false);
+    }
+
+    public GrafanaConnector(WebClient client, String bearerToken, String baseUrl) {
+        this(client, bearerToken, baseUrl, true);
+    }
+
+    public GrafanaConnector(WebClient client, String bearerToken, String baseUrl, boolean fullUrl) {
         this.client = client;
         this.authHeader = "Bearer " + bearerToken;
+        this.baseUrl = baseUrl;
+        this.reportFullUrl = fullUrl;
     }
 
     Future<PostDashboardResponse> postDashboard(
@@ -63,7 +77,7 @@ public class GrafanaConnector {
         // Now the post result is stored in future
 
         // Check output before returning the value
-        return future.compose(GrafanaConnector::checkGrafanaOutput);
+        return future.compose(this::checkGrafanaOutput);
     }
 
     Future<HttpResponse<DeleteResponse>> deleteDashboard(
@@ -92,7 +106,7 @@ public class GrafanaConnector {
         }
     }
 
-    private static Future<PostDashboardResponse> checkGrafanaOutput(
+    private Future<PostDashboardResponse> checkGrafanaOutput(
             HttpResponse<PostDashboardResponse> response
     ) {
         int code = response.statusCode();
@@ -101,14 +115,27 @@ public class GrafanaConnector {
             return Future.failedFuture(
                     new HttpStatusException(409, "Dashboard name conflict, please use a different name")
             );
+        } else if (code == 401 || code == 403) {
+            log.warn("Grafana authentication error: code {}, response: {}", code, response.body());
+            return Future.failedFuture(new IllegalArgumentException(
+                    "Authentication error, please check the API key provided"
+            ));
         } else if (code < 200 || 300 <= code) {
             // Problematic code or body not parsed correctly
+            log.warn("Grafana unexpected error: code {}, response: {}", code, response.body());
             return Future.failedFuture(new IllegalArgumentException(
-                    String.format("Unexpected response from Grafana: %s", response.body())
+                    String.format("Unexpected response from Grafana: status code %s, response %s", code, response.body())
             ));
         } else {
             // All good
-            return Future.succeededFuture(response.body());
+            // edit the URL adding the base
+            PostDashboardResponse out = response.body();
+            String rUrl = out.url;
+            if ((!rUrl.startsWith("http://")) && reportFullUrl) {
+                rUrl = baseUrl + rUrl;
+                out.url = rUrl;
+            }
+            return Future.succeededFuture(out);
         }
     }
 }

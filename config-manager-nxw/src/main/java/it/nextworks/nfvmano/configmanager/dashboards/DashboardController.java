@@ -22,7 +22,7 @@ import io.vertx.ext.web.handler.impl.HttpStatusException;
 import it.nextworks.nfvmano.configmanager.dashboards.model.Dashboard;
 import it.nextworks.nfvmano.configmanager.dashboards.model.DashboardDescription;
 import it.nextworks.nfvmano.configmanager.dashboards.model.DashboardQueryResult;
-import it.nextworks.nfvmano.configmanager.model.DeleteResponse;
+import it.nextworks.nfvmano.configmanager.common.DeleteResponse;
 import it.nextworks.nfvmano.configmanager.utils.ContextUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

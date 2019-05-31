@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-service
+  namespace: monitoring
+spec:
+  selector:
+    app: nginx
+  ports:
+  - protocol: TCP
+    port: 9090
+    targetPort: 80
+  externalIPs:
+  - x.x.x.x

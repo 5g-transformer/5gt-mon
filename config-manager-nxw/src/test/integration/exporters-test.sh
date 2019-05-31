@@ -5,13 +5,13 @@ java -jar $path --test &
 
 pid="$!"
 
-sleep 1
+sleep 2
 
 printf "\n\n==================\nSent Request\n==================\n\n"
 
 printf "POST http://localhost:8989/prom-manager/exporter\n"
 
-curl -X POST http://localhost:8989/prom-manager/exporter -H "Accept: application/json" -d '
+curl -X POST http://localhost:8989/prom-manager/exporter -H "Content-Type: application/json" -H "Accept: application/json" -d '
 {
   "name": "pippo",
   "endpoint": [
@@ -20,6 +20,8 @@ curl -X POST http://localhost:8989/prom-manager/exporter -H "Accept: application
       "port": 7623
     }
   ],
+  "nsId": "NS-ID",
+  "vnfdId": "THIS-IS-THE-VNFD",
   "collectionPeriod": 15
 }' | jq .
 

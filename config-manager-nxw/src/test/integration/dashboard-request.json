@@ -3,8 +3,7 @@
   "panels": [
     {
       "title": "Http request rate",
-      "query": "sum(rate(http_requests_total[1m]))",
-      "size": null
+      "query": "sum(rate(http_requests_total[1m]))"
     }
   ],
   "users": [

@@ -33,7 +33,7 @@ import java.util.StringJoiner;
 public class PrometheusConfig {
 
     private List<ScrapeConfigs> scrapeConfigs = new ArrayList<>();
-    private Global global;
+    private PromGlobal global;
     private Alerting alerting;
     private List<String> ruleFiles = new ArrayList<>();
 
@@ -43,7 +43,7 @@ public class PrometheusConfig {
 
     public PrometheusConfig(
             List<ScrapeConfigs> scrapeConfigs,
-            Global global,
+            PromGlobal global,
             Alerting alerting,
             List<String> ruleFiles
     ) {
@@ -66,6 +66,9 @@ public class PrometheusConfig {
 
     @JsonProperty("scrape_configs")
     public void setScrapeConfigs(List<ScrapeConfigs> scrapeConfigs) {
+        if (null == scrapeConfigs) {
+            scrapeConfigs = new ArrayList<>();
+        }
         this.scrapeConfigs = scrapeConfigs;
     }
 
@@ -96,12 +99,12 @@ public class PrometheusConfig {
     }
 
     @JsonProperty("global")
-    public Global getGlobal() {
+    public PromGlobal getGlobal() {
         return global;
     }
 
     @JsonProperty("global")
-    private void setGlobal(Global global) {
+    private void setGlobal(PromGlobal global) {
         this.global = global;
     }
 

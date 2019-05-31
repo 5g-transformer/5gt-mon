@@ -32,6 +32,10 @@ public class Exporter {
     private List<Endpoint> endpoint = null;
     @JsonProperty("collectionPeriod")
     private Integer collectionPeriod = null;
+    @JsonProperty("nsId")
+    private String nsId;
+    @JsonProperty("vnfdId")
+    private String vnfdId;
 
     public Exporter() {
 
@@ -58,6 +62,22 @@ public class Exporter {
     public Exporter name(String name) {
         this.name = name;
         return this;
+    }
+
+    public String getNsId() {
+        return nsId;
+    }
+
+    public void setNsId(String nsId) {
+        this.nsId = nsId;
+    }
+
+    public String getVnfdId() {
+        return vnfdId;
+    }
+
+    public void setVnfdId(String vnfdId) {
+        this.vnfdId = vnfdId;
     }
 
     /**
@@ -130,12 +150,14 @@ public class Exporter {
         return Objects.equals(this.exporterId, exporter.exporterId) &&
                 Objects.equals(this.name, exporter.name) &&
                 Objects.equals(this.endpoint, exporter.endpoint) &&
-                Objects.equals(this.collectionPeriod, exporter.collectionPeriod);
+                Objects.equals(this.collectionPeriod, exporter.collectionPeriod) &&
+                Objects.equals(this.nsId, exporter.nsId) &&
+                Objects.equals(this.vnfdId, exporter.vnfdId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(exporterId, name, endpoint, collectionPeriod);
+        return Objects.hash(exporterId, name, endpoint, collectionPeriod, nsId, vnfdId);
     }
 
 
@@ -147,6 +169,8 @@ public class Exporter {
                 "    name: " + toIndentedString(name) + "\n" +
                 "    endpoint: " + toIndentedString(endpoint) + "\n" +
                 "    collectionPeriod: " + toIndentedString(collectionPeriod) + "\n" +
+                "    nsId: " + toIndentedString(nsId) + "\n" +
+                "    vnfdId: " + toIndentedString(vnfdId) + "\n" +
                 "}";
     }
 

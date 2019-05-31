@@ -10,8 +10,8 @@ route:
   # will remain at the root node and be dispatched to 'default-receiver'.
 
   routes:
-  - match_re:
-      severity: ^(.*)$
+  - match:
+      alertname: HighRateRequest
 
 # Setup the default receiver to send a POST message
 # to localhost:8080 whenever triggered

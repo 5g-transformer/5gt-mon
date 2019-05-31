@@ -26,28 +26,83 @@
  * Do not edit the class manually.
  */
 
-
 package it.nextworks.nfvmano.configmanager.alerts.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.vertx.ext.web.api.validation.ValidationException;
+import it.nextworks.nfvmano.configmanager.common.KVP;
+import it.nextworks.nfvmano.configmanager.utils.Validated;
 
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Alert
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-03T15:45:45.203+02:00")
-public class Alert {
+public class Alert implements Validated {
+
+    private static Pattern FOR_RE = Pattern.compile("^(\\d+)([sm])$");
+
+    public Optional<ValidationException> validate() {
+        if (alertName == null) {
+            return Optional.of(new ValidationException("ALERT: alertname cannot be null"));
+        }
+        if (query == null) {
+            return Optional.of(new ValidationException("ALERT: query cannot be null"));
+        }
+        if (value == null) {
+            return Optional.of(new ValidationException("ALERT: value cannot be null"));
+        }
+        if (kind == null) {
+            return Optional.of(new ValidationException("ALERT: kind cannot be null"));
+        }
+        if (severity == null) {
+            return Optional.of(new ValidationException("ALERT: severity cannot be null"));
+        }
+        if (target == null) {
+            return Optional.of(new ValidationException("ALERT: target cannot be null"));
+        }
+        for (KVP label : labels) {
+            Optional<ValidationException> error = label.validate();
+            if (error.isPresent()) {
+                String message = error.get().getMessage();
+                return Optional.of(new ValidationException("ALERT." + message));
+            }
+        }
+        return Optional.empty();
+    }
+
     @JsonProperty("alertId")
     private String alertId = null;
+
+    @JsonProperty("alertName")
+    private String alertName = null;
+
+    @JsonProperty("labels")
+    private List<KVP> labels = new ArrayList<>();
 
     @JsonProperty("query")
     private String query = null;
 
+    @JsonProperty("severity")
+    private String severity = null;
+
+    @JsonProperty("for")
+    private String forTime = null;
+
+    @JsonProperty("target")
+    private URI target = null;
+
     @JsonProperty("value")
     private Double value = null;
+
     @JsonProperty("kind")
     private KindEnum kind = null;
 
@@ -123,6 +178,78 @@ public class Alert {
         this.kind = kind;
     }
 
+    public List<KVP> getLabels() {
+        return labels;
+    }
+
+    public void setLabels(List<KVP> labels) {
+        this.labels = labels;
+    }
+
+    public URI getTarget() {
+        return target;
+    }
+
+    public void setTarget(URI target) {
+        this.target = target;
+    }
+
+    public String getAlertName() {
+        return alertName;
+    }
+
+    public void setAlertName(String alertName) {
+        this.alertName = alertName;
+    }
+
+    public String getSeverity() {
+        return severity;
+    }
+
+    public void setSeverity(String severity) {
+        this.severity = severity;
+    }
+
+    public String getForTime() {
+        return forTime;
+    }
+
+    public int getForSeconds() {
+        Matcher match = FOR_RE.matcher(forTime + "\n");
+        boolean b = match.find();
+        if (!b) {
+            throw new IllegalStateException(String.format(
+                    "Illegal for value: %s",
+                    forTime
+            ));
+        }
+        String num = match.group(1);
+        String unit = match.group(2);
+        if (unit.equals("m")) {
+            return 60 * Integer.valueOf(num);
+        } else { // seconds
+            return Integer.valueOf(num);
+        }
+    }
+
+    public void setForSeconds(int forSeconds) {
+        if (forSeconds == 0) {
+            forTime = "0s";
+        } else if (forSeconds % 60 == 0) {
+            forTime = forSeconds / 60 + "m";
+        } else {
+            forTime = forSeconds + "s";
+        }
+    }
+
+    public void setForMinutes(int forMinutes) {
+        if (forMinutes == 0) {
+            forTime = "0s";
+        } else {
+            forTime = forMinutes + "m";
+        }
+    }
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -132,10 +259,19 @@ public class Alert {
             return false;
         }
         Alert alert = (Alert) o;
-        return Objects.equals(this.alertId, alert.alertId) &&
+        return (
+                Objects.equals(this.alertId, alert.alertId) &&
+                this.alertId != null
+        ) || (
+                this.alertId == null && alert.alertId == null &&
+                Objects.equals(this.alertName, alert.alertName) &&
                 Objects.equals(this.query, alert.query) &&
                 Objects.equals(this.value, alert.value) &&
-                Objects.equals(this.kind, alert.kind);
+                Objects.equals(this.kind, alert.kind) &&
+                Objects.equals(this.severity, alert.severity) &&
+                Objects.equals(this.labels, alert.labels) &&
+                Objects.equals(this.target, alert.target)
+        );
     }
 
     @Override
@@ -145,15 +281,17 @@ public class Alert {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class Alert {\n");
 
-        sb.append("    alertId: ").append(toIndentedString(alertId)).append("\n");
-        sb.append("    query: ").append(toIndentedString(query)).append("\n");
-        sb.append("    value: ").append(toIndentedString(value)).append("\n");
-        sb.append("    kind: ").append(toIndentedString(kind)).append("\n");
-        sb.append("}");
-        return sb.toString();
+        return "class Alert {\n" +
+                "    alertId: " + toIndentedString(alertId) + "\n" +
+                "    alertName: " + toIndentedString(alertName) + "\n" +
+                "    query: " + toIndentedString(query) + "\n" +
+                "    value: " + toIndentedString(value) + "\n" +
+                "    kind: " + toIndentedString(kind) + "\n" +
+                "    labels: " + toIndentedString(labels) + "\n" +
+                "    severity: " + toIndentedString(severity) + "\n" +
+                "    target: " + toIndentedString(target) + "\n" +
+                "}";
     }
 
     /**
@@ -171,22 +309,25 @@ public class Alert {
      * the kind of inequality the query should satisfy related to the value
      */
     public enum KindEnum {
-        G("g"),
+        G("G", ">"),
 
-        GEQ("geq"),
+        GEQ("GEQ", ">="),
 
-        L("l"),
+        L("L", "<"),
 
-        LEQ("leq"),
+        LEQ("LEQ", "<="),
 
-        EQ("eq"),
+        EQ("EQ", "=="),
 
-        NEQ("neq");
+        NEQ("NEQ", "!=");
 
         private String value;
 
-        KindEnum(String value) {
+        private String operator;
+
+        KindEnum(String value, String operator) {
             this.value = value;
+            this.operator = operator;
         }
 
         @JsonCreator
@@ -207,6 +348,10 @@ public class Alert {
         @Override
         public String toString() {
             return String.valueOf(value);
+        }
+
+        public String operator() {
+            return operator;
         }
     }
 }

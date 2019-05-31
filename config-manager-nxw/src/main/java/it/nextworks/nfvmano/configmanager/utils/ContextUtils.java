@@ -20,6 +20,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import io.netty.handler.codec.http.HttpHeaderNames;
+import io.vertx.core.Future;
 import io.vertx.core.Handler;
 import io.vertx.core.http.HttpHeaders;
 import io.vertx.ext.web.RoutingContext;
@@ -30,6 +31,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.StringJoiner;
 import java.util.function.Supplier;
 
@@ -42,10 +44,10 @@ public class ContextUtils {
 
     private static final Logger log = LoggerFactory.getLogger(ContextUtils.class);
 
-    private static final CharSequence APPLICATION_YAML = "application/x-yaml";
-    private static final CharSequence APPLICATION_JSON = "application/json";
+    private static final String APPLICATION_YAML = "application/x-yaml";
+    private static final String APPLICATION_JSON = "application/json";
 
-    private static final Map<CharSequence, ObjectMapper> workingTypes;
+    private static final Map<String, ObjectMapper> workingTypes;
     private static final ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
     private static final ObjectMapper jsonMapper = new ObjectMapper();
     private static String ERROR_RESPONDING = new StringJoiner("\n")
@@ -68,9 +70,31 @@ public class ContextUtils {
     }
 
     public static void respond(RoutingContext ctx, int statusCode, Object object) {
-        CharSequence accepts = ctx.getAcceptableContentType();
+        // Check if the response is an optional for special behaviour
+        if (object instanceof Optional) {
+            Optional opt = (Optional) object;
+            if (opt.isPresent()) {
+                // Unwrap it
+                object = opt.get();
+            } else {
+                // Not found
+                ctx.fail(new HttpStatusException(404, "No such element"));
+                return;
+            }
+        }
+        String accepts = ctx.getAcceptableContentType();
         if (accepts == null) {
             accepts = APPLICATION_JSON;
+        }
+        // Strip parameters (e.g. charset)
+        if (accepts.contains(";")) {
+            String[] split = accepts.split(";");
+            for (String subString : split) {
+                if (subString.contains("charset")) {
+                    continue;
+                }
+                accepts = subString.trim();
+            }
         }
         if ((!workingTypes.containsKey(accepts))) {
             ctx.response().setStatusCode(406).end(new StringJoiner("\n")
@@ -83,6 +107,7 @@ public class ContextUtils {
                     ))
                     .toString()
             );
+            return;
         }
         ctx.response().setStatusCode(statusCode);
         ObjectMapper objectMapper = workingTypes.get(accepts);
@@ -95,9 +120,30 @@ public class ContextUtils {
         }
     }
 
+    private static String checkContentType(String headerValue) {
+        if (headerValue == null) {
+            return null;
+        }
+        if (headerValue.contains(";")) {
+            String[] split = headerValue.split(";");
+            for (String subString : split) {
+                if (subString.contains("charset")) {
+                    continue;
+                }
+                headerValue = subString.trim();
+            }
+        }
+        if (workingTypes.containsKey(headerValue)) {
+            return headerValue;
+        } else {
+            return null;
+        }
+    }
+
     public static <T> T readBody(RoutingContext ctx, Class<T> type) {
         String contentType = ctx.request().getHeader(HttpHeaders.CONTENT_TYPE);
-        if (contentType == null || !workingTypes.containsKey(contentType)) {
+        String parsedContentType = checkContentType(contentType);
+        if (parsedContentType == null) {
             ctx.response().setStatusCode(415).end(new StringJoiner("\n")
                     .add("Unsupported Media Type")
                     .add("Cannot understand provided media type")
@@ -111,7 +157,7 @@ public class ContextUtils {
         } else {
             String body = ctx.getBodyAsString();
             try {
-                ObjectMapper mapper = workingTypes.get(contentType);
+                ObjectMapper mapper = workingTypes.get(parsedContentType);
                 return mapper.readValue(body, type);
             } catch (IOException exc) {
                 ctx.fail(new HttpStatusException(
@@ -119,6 +165,34 @@ public class ContextUtils {
                         String.format("Cannot parse request body: %s", exc.getMessage())
                 ));
                 return null;
+            }
+        }
+    }
+
+    public static <T> T readBodyThrowing(RoutingContext ctx, Class<T> type) {
+        String contentType = ctx.request().getHeader(HttpHeaders.CONTENT_TYPE);
+        String parsedContentType = checkContentType(contentType);
+        if (parsedContentType == null) {
+            log.warn("Not supported content type {}", contentType);
+            throw new HttpStatusException(
+                    415,
+                    String.format(
+                            "Cannot understand media type. Provided %s, understood: %s",
+                            contentType,
+                            workingTypes.keySet().toString()
+                    )
+            );
+        } else {
+            String body = ctx.getBodyAsString();
+            try {
+                ObjectMapper mapper = workingTypes.get(parsedContentType);
+                return mapper.readValue(body, type);
+            } catch (IOException exc) {
+                log.warn("Deserialization error: {}", exc.getMessage());
+                throw new HttpStatusException(
+                        400,
+                        String.format("Cannot parse request body: %s", exc.getMessage())
+                );
             }
         }
     }
@@ -133,55 +207,59 @@ public class ContextUtils {
         };
     }
 
-    public static <T> void runBlockingLogging(
-            RoutingContext ctx,
-            Supplier<T> supplier,
+    public static <T> Handler<RoutingContext> parsing(Class<T> bodyType) {
+        return ctx -> {
+            T body = readBodyThrowing(ctx, bodyType);
+            if (body != null) {
+                ctx.put("_parsed", body);
+                ctx.next();
+            } else {
+                ctx.fail(new HttpStatusException(400, "Null payload"));
+            }
+        };
+    }
+
+    public static <T> void handleLogging(
+            Supplier<Future<T>> supplier,
             String operation,
             Handler<T> handler,
             Handler<Throwable> errorHandler
     ) {
-        ctx.vertx().<T>executeBlocking(
-                future -> {
-                    T result = supplier.get();
-                    future.complete(result);
-                },
-                ar -> {
-                    if (ar.failed()) {
-                        log.error("Error in op '{}': {}", operation, ar.cause().getMessage());
-                        log.debug("Error details: ", ar.cause());
-                        errorHandler.handle(ar.cause());
-                    } else {
-                        log.debug("Op '{}' successful.", operation);
-                        handler.handle(ar.result());
-                    }
-                }
-        );
+        Future<T> future = supplier.get();
+        future.setHandler(ar -> {
+            if (ar.failed()) {
+                log.error("Error in op '{}': {}", operation, ar.cause().getMessage());
+                log.debug("Error details: ", ar.cause());
+                errorHandler.handle(ar.cause());
+            } else {
+                log.debug("Op '{}' successful.", operation);
+                handler.handle(ar.result());
+            }
+        });
     }
 
-    public static <T> void runBlockingLogging(
+    public static <T> void handleLogging(
             RoutingContext ctx,
-            Supplier<T> supplier,
+            Supplier<Future<T>> supplier,
             String operation,
             Handler<T> handler
     ) {
-        runBlockingLogging(
-                ctx,
+        handleLogging(
                 supplier,
                 operation,
                 handler,
-                x -> {}
+                ctx::fail
         );
     }
 
-    public static <T> void runBlockingAndRespond(
+    public static <T> void handleAndRespond(
             RoutingContext ctx,
-            Supplier<T> supplier,
+            Supplier<Future<T>> supplier,
             String operation,
             String apiCallName,
             int successCode
     ) {
-        runBlockingLogging(
-                ctx,
+        handleLogging(
                 supplier,
                 operation,
                 res -> {
@@ -192,18 +270,29 @@ public class ContextUtils {
         );
     }
 
-    public static <T> void runBlockingAndRespond(
+    public static <T> void handleAndRespond(
             RoutingContext ctx,
-            Supplier<T> supplier,
+            Supplier<Future<T>> supplier,
             String operation,
             String apiCallName
     ) {
-        runBlockingAndRespond(
+        handleAndRespond(
                 ctx,
                 supplier,
                 operation,
                 apiCallName,
                 200
         );
+    }
+
+    public static <T> void await(Future<T> future, RoutingContext ctx) {
+        future.setHandler(ar -> {
+            if (ar.failed()) {
+                ctx.fail(ar.cause());
+            } else {
+                ctx.put("_awaited", ar.result());
+                ctx.next();
+            }
+        });
     }
 }

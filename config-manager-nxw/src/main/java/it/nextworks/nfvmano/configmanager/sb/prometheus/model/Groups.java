@@ -18,6 +18,7 @@ package it.nextworks.nfvmano.configmanager.sb.prometheus.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,7 +29,7 @@ import java.util.List;
 public class Groups {
 
     @JsonProperty("rules")
-    private List<Rules> rules;
+    private List<Rules> rules = new ArrayList<>();
     @JsonProperty("name")
     private String name;
 
@@ -42,7 +43,7 @@ public class Groups {
     }
 
     @JsonProperty("rules")
-    private void setRules(List<Rules> rules) {
+    public void setRules(List<Rules> rules) {
         this.rules = rules;
     }
 
@@ -52,7 +53,7 @@ public class Groups {
     }
 
     @JsonProperty("name")
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

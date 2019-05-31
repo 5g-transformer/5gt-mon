@@ -25,6 +25,9 @@ import io.vertx.ext.web.client.WebClient;
 import io.vertx.ext.web.client.WebClientOptions;
 import io.vertx.ext.web.handler.BodyHandler;
 import io.vertx.ext.web.handler.impl.HttpStatusException;
+import it.nextworks.nfvmano.configmanager.alerts.AlertRepo;
+import it.nextworks.nfvmano.configmanager.alerts.AlertsController;
+import it.nextworks.nfvmano.configmanager.alerts.MemoryAlertRepo;
 import it.nextworks.nfvmano.configmanager.common.ErrorResponse;
 import it.nextworks.nfvmano.configmanager.dashboards.DashboardController;
 import it.nextworks.nfvmano.configmanager.dashboards.DashboardRepo;
@@ -38,10 +41,15 @@ import it.nextworks.nfvmano.configmanager.exporters.model.Exporter;
 import it.nextworks.nfvmano.configmanager.exporters.model.ExporterDescription;
 import it.nextworks.nfvmano.configmanager.sb.grafana.GrafanaConnector;
 import it.nextworks.nfvmano.configmanager.sb.grafana.GrafanaDashboardService;
+import it.nextworks.nfvmano.configmanager.sb.prometheus.AlertService;
 import it.nextworks.nfvmano.configmanager.sb.prometheus.ExporterService;
+import it.nextworks.nfvmano.configmanager.sb.prometheus.MemoryTargetRepo;
 import it.nextworks.nfvmano.configmanager.sb.prometheus.PrometheusConnector;
+import it.nextworks.nfvmano.configmanager.sb.prometheus.TargetRepo;
 import it.nextworks.nfvmano.configmanager.utils.ConfigReader;
 import it.nextworks.nfvmano.configmanager.utils.Paths;
+import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -69,17 +77,6 @@ public class MainVerticle extends AbstractVerticle {
         );
     }
 
-    private int port;
-
-    // CLASS MEMBERS
-    private String promConfigPath;
-    private String promAlertRulesPath;
-    private String grafanaHost;
-    private int grafanaPort;
-    private String grafanaToken;
-    private ExporterController exporterController;
-    private DashboardController dashboardController;
-
     private static Route producing(Route route) {
         for (String type : AVAILABLE_TYPES) {
             route.produces(type);
@@ -87,39 +84,107 @@ public class MainVerticle extends AbstractVerticle {
         return route;
     }
 
+    // Instance members
+    private int port;
+
+    private String promConfigPath;
+    private String promAlertRulesPath;
+    private String promAlertManagerPath;
+
+    private String grafanaHost;
+    private int grafanaPort;
+    private String grafanaToken;
+    private boolean reportFullUrl;
+
+    private ExporterController exporterController;
+    private DashboardController dashboardController;
+    private AlertsController alertsController;
+
+    private String promHost;
+    private int promPort;
+    private String amHost;
+    private int amPort;
+
+    private PrometheusConnector promConnector;
+
     private void readConfig() {
         ConfigReader config = new ConfigReader();
+
         port = config.getIntProperty("server.port");
+
         promConfigPath = config.getProperty("prometheus.config");
         promAlertRulesPath = config.getProperty("prometheus.alertRules");
+        promAlertManagerPath = config.getProperty("prometheus.alertManager");
+
         grafanaHost = config.getProperty("grafana.host");
         grafanaPort = config.getIntProperty("grafana.port");
         grafanaToken = config.getProperty("grafana.token");
+        reportFullUrl = config.getBoolProperty("dashboards.returnFullUrl");
+
+        promHost = config.getProperty("prometheus.host");
+        promPort = config.getIntProperty("prometheus.port");
+        amHost = config.getProperty("alertmanager.host");
+        amPort = config.getIntProperty("alertmanager.port");
+
+        String logLevel = config.getProperty("logging.level");
+
+        if (logLevel != null) {
+            org.apache.log4j.Logger logger = LogManager.getLogger("it.nextworks.nfvmano");
+            Level level = Level.toLevel(logLevel);
+            logger.setLevel(level);
+        }
+    }
+
+    private PrometheusConnector makePrometheusConnector() {
+        WebClient webClient = WebClient.create(vertx);
+        if (promConnector == null) {
+            promConnector = new PrometheusConnector(
+                    promConfigPath,
+                    promAlertRulesPath,
+                    promAlertManagerPath,
+                    promHost,
+                    promPort,
+                    amHost,
+                    amPort,
+                    webClient
+            );
+        }
+        return promConnector;
     }
 
     private void makeExporterController() {
-        PrometheusConnector pConnector = new PrometheusConnector(promConfigPath, promAlertRulesPath);
-        ExporterRepo exporterRepo = new MemoryExporterRepo(); // TODO make expRepo
+        PrometheusConnector pConnector = makePrometheusConnector();
+        ExporterRepo exporterRepo = new MemoryExporterRepo(); // TODO make persistent expRepo?
         ExporterService exporterService = new ExporterService(pConnector, exporterRepo);
         exporterController = new ExporterController(exporterService);
     }
 
     private void makeDashboardController() {
-        DashboardRepo dashboardRepo = new MemoryDashboardRepo();  // TODO make dash repo
+        DashboardRepo dashboardRepo = new MemoryDashboardRepo();  // TODO make persistent dash repo?
         WebClient webClient = WebClient.create(
                 vertx,
                 new WebClientOptions()
                         .setDefaultHost(grafanaHost)
                         .setDefaultPort(grafanaPort)
         );
-        GrafanaConnector gConnector = new GrafanaConnector(webClient, grafanaToken);
+        String grafanaBaseUrl = "http://" + grafanaHost + ":" + grafanaPort;
+        GrafanaConnector gConnector = new GrafanaConnector(webClient, grafanaToken, grafanaBaseUrl, reportFullUrl);
         GrafanaDashboardService service = new GrafanaDashboardService(gConnector, dashboardRepo);
         dashboardController = new DashboardController(service);
+    }
+
+    private void makeAlertsController() {
+        PrometheusConnector pConnector = makePrometheusConnector();
+        AlertRepo alertRepo = new MemoryAlertRepo(); // TODO make persistent repo?
+        TargetRepo targetRepo = new MemoryTargetRepo();
+        AlertService alertService = new AlertService(pConnector, alertRepo, targetRepo);
+        alertsController = new AlertsController(alertService);
     }
 
     private void makeControllers() {
         makeExporterController();
         makeDashboardController();
+        makeAlertsController();
     }
 
     private void makeExporterRoutes(Router router) {
@@ -166,6 +231,18 @@ public class MainVerticle extends AbstractVerticle {
                 .handler(makeParsingHandler(dashboardController::updateDashboard, Dashboard.class));
     }
 
+    private void makeAlertRoutes(Router router) {
+        if (alertsController == null) {
+            throw new IllegalStateException("Initialization incomplete, missing alerts controller");
+        }
+        alertsController.getAllAlerts(producing(router.get(Paths.Rest.ALERT)));
+        alertsController.postAlert(producing(router.post(Paths.Rest.ALERT)));
+        alertsController.getAlert(producing(router.get(Paths.Rest.ONE_ALERT)));
+        alertsController.putAlert(producing(router.put(Paths.Rest.ONE_ALERT)));
+        alertsController.deleteAlert(producing(router.delete(Paths.Rest.ONE_ALERT)));
+
+    }
+
     @Override
     public void start() {
         readConfig();
@@ -174,14 +251,21 @@ public class MainVerticle extends AbstractVerticle {
         router.route().handler(BodyHandler.create()).failureHandler(this::handleFailure);
         makeExporterRoutes(router);
         makeDashboardRoutes(router);
+        makeAlertRoutes(router);
         vertx.createHttpServer().requestHandler(router::accept).listen(port);
     }
-
 
     private void handleFailure(RoutingContext ctx) {
         Throwable error = ctx.failure();
         if (!(error instanceof HttpStatusException)) {
-            log.error("Unexpected error:", error);
+            String cause;
+            if (error.getCause() != null) {
+                cause = String.format(" caused by %s", error.getCause().getMessage());
+            } else {
+                cause = "";
+            }
+            log.error("Unexpected error: {}{}", error.getMessage(), cause);
+            log.debug("Details:", error);
             respond(ctx, 500, new ErrorResponse(
                     "500",
                     "Internal Server Error",
